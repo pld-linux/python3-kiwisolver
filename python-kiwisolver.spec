@@ -6,25 +6,26 @@
 Summary:	Fast implementation of the Cassowary constraint solver
 Summary(pl.UTF-8):	Szybka implementacja rozwiązywania układu ograniczeń metodą Cassowary
 Name:		python-kiwisolver
-Version:	1.0.1
-Release:	2
+Version:	1.1.0
+Release:	1
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/kiwisolver/
 Source0:	https://files.pythonhosted.org/packages/source/k/kiwisolver/kiwisolver-%{version}.tar.gz
-# Source0-md5:	e2a1718b837e2cd001f7c06934616fcd
+# Source0-md5:	fc8a614367f7ba0d34a02fd08c535afc
 URL:		https://github.com/nucleic/kiwi
 BuildRequires:	libstdc++-devel
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
 %if %{with python2}
-BuildRequires:	python-devel >= 2
+BuildRequires:	python-devel >= 1:2.7
 BuildRequires:	python-setuptools
 %endif
 %if %{with python3}
-BuildRequires:	python3-devel >= 1:3.2
+BuildRequires:	python3-devel >= 1:3.4
 BuildRequires:	python3-setuptools
 %endif
+Requires:	python-modules >= 1:2.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -54,6 +55,7 @@ Poza kodem w C++ Kiwi zawiera ręcznie napisane wiązania Pythona.
 Summary:	Fast implementation of the Cassowary constraint solver
 Summary(pl.UTF-8):	Szybka implementacja rozwiązywania układu ograniczeń metodą Cassowary
 Group:		Libraries/Python
+Requires:	python3-modules >= 1:3.4
 
 %description -n python3-kiwisolver
 Kiwi is an efficient C++ implementation of the Cassowary constraint
@@ -109,7 +111,7 @@ rm -rf $RPM_BUILD_ROOT
 %if %{with python2}
 %files
 %defattr(644,root,root,755)
-%doc COPYING.txt README.rst releasenotes.rst
+%doc README.rst releasenotes.rst
 %attr(755,root,root) %{py_sitedir}/kiwisolver.so
 %{py_sitedir}/kiwisolver-%{version}-py*.egg-info
 %endif
@@ -117,7 +119,7 @@ rm -rf $RPM_BUILD_ROOT
 %if %{with python3}
 %files -n python3-kiwisolver
 %defattr(644,root,root,755)
-%doc COPYING.txt README.rst releasenotes.rst
+%doc README.rst releasenotes.rst
 %attr(755,root,root) %{py3_sitedir}/kiwisolver.cpython-*.so
 %{py3_sitedir}/kiwisolver-%{version}-py*.egg-info
 %endif
