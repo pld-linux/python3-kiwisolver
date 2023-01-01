@@ -6,6 +6,7 @@
 Summary:	Fast implementation of the Cassowary constraint solver
 Summary(pl.UTF-8):	Szybka implementacja rozwiązywania układu ograniczeń metodą Cassowary
 Name:		python-kiwisolver
+# keep 1.1.x here for python2 support
 Version:	1.1.0
 Release:	7
 License:	BSD
