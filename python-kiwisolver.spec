@@ -8,7 +8,7 @@ Summary(pl.UTF-8):	Szybka implementacja rozwiązywania układu ograniczeń metod
 Name:		python-kiwisolver
 # keep 1.1.x here for python2 support
 Version:	1.1.0
-Release:	7
+Release:	8
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/kiwisolver/
