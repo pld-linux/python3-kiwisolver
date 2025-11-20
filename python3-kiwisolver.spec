@@ -1,13 +1,13 @@
 Summary:	Fast implementation of the Cassowary constraint solver
 Summary(pl.UTF-8):	Szybka implementacja rozwiązywania układu ograniczeń metodą Cassowary
 Name:		python3-kiwisolver
-Version:	1.4.8
+Version:	1.4.9
 Release:	1
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/kiwisolver/
 Source0:	https://files.pythonhosted.org/packages/source/k/kiwisolver/kiwisolver-%{version}.tar.gz
-# Source0-md5:	2eb55aab42272292a732411bb6c79dee
+# Source0-md5:	63d13da80a2420278c695d5784dc0b78
 URL:		https://github.com/nucleic/kiwi
 BuildRequires:	libstdc++-devel >= 6:4.7
 BuildRequires:	python3-cppy >= 1.3.0
@@ -58,7 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.rst releasenotes.rst
+%doc LICENSE README.rst releasenotes.rst
 %dir %{py3_sitedir}/kiwisolver
 %attr(755,root,root) %{py3_sitedir}/kiwisolver/_cext.cpython-*.so
 %attr(755,root,root) %{py3_sitedir}/kiwisolver/_cext.pyi
